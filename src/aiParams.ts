@@ -1,4 +1,5 @@
 import { ChainType } from "@/chainFactory";
+import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
 export interface ModelConfig {
@@ -56,6 +57,7 @@ export interface LangChainParams {
 
 export interface SetChainOptions {
   prompt?: ChatPromptTemplate;
+  chatModel?: BaseChatModel;
   noteFile?: any;
   forceNewCreation?: boolean;
   abortController?: AbortController;
