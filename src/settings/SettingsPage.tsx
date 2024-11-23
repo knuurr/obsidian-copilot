@@ -12,6 +12,7 @@ import { SettingsProvider } from "./contexts/SettingsContext";
 export interface CopilotSettings {
   openAIApiKey: string;
   openAIOrgId: string;
+  mistralApiKey: string;
   huggingfaceApiKey: string;
   cohereApiKey: string;
   anthropicApiKey: string;

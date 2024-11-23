@@ -15,6 +15,9 @@ export class ProxyChatOpenAI extends ChatOpenAI {
       ...this["clientConfig"],
       baseURL: fields.openAIProxyBaseUrl,
       dangerouslyAllowBrowser: true,
+      defaultHeaders: {
+        "Content-Type": "application/json",
+      },
       fetch: fields.enableCors ? safeFetch : undefined,
     });
   }

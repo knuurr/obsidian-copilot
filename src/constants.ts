@@ -20,6 +20,7 @@ export enum ChatModels {
   CLAUDE_3_HAIKU = "claude-3-haiku-20240307",
   COMMAND_R = "command-r",
   COMMAND_R_PLUS = "command-r-plus",
+  MISTRAL_LARGE = "mistral-large-latest",
 }
 
 // Model Providers
@@ -34,6 +35,7 @@ export enum ChatModelProviders {
   OLLAMA = "ollama",
   LM_STUDIO = "lm-studio",
   OPENAI_FORMAT = "3rd party (openai-format)",
+  MISTRAL = "mistral",
 }
 
 export const BUILTIN_CHAT_MODELS: CustomModel[] = [
@@ -96,6 +98,12 @@ export const BUILTIN_CHAT_MODELS: CustomModel[] = [
   {
     name: ChatModels.AZURE_OPENAI,
     provider: ChatModelProviders.AZURE_OPENAI,
+    enabled: true,
+    isBuiltIn: true,
+  },
+  {
+    name: ChatModels.MISTRAL_LARGE,
+    provider: ChatModelProviders.MISTRAL,
     enabled: true,
     isBuiltIn: true,
   },
@@ -206,6 +214,7 @@ export const COMMAND_IDS = {
 export const DEFAULT_SETTINGS: CopilotSettings = {
   openAIApiKey: "",
   openAIOrgId: "",
+  mistralApiKey: "",
   huggingfaceApiKey: "",
   cohereApiKey: "",
   anthropicApiKey: "",

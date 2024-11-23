@@ -10,6 +10,7 @@ export interface ModelConfig {
   maxTokens?: number;
   openAIApiKey?: string;
   openAIOrgId?: string;
+  mistralApiKey?: string;
   anthropicApiKey?: string;
   cohereApiKey?: string;
   azureOpenAIApiKey?: string;
@@ -27,6 +28,7 @@ export interface LangChainParams {
   modelKey: string; // name | provider, e.g. "gpt-4o|openai"
   openAIApiKey: string;
   openAIOrgId: string;
+  mistralApiKey: string;
   huggingfaceApiKey: string;
   cohereApiKey: string;
   anthropicApiKey: string;
